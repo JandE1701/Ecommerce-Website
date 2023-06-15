@@ -13,14 +13,8 @@ function copyMenu() {
 
     // Clonar .header-top .wrapper y añadirlo a .thetop-nav en .off-canvas
     const topNav = document.querySelector(".header-top .wrapper");
-    const topPlace = document.querySelector(".off-canvas .thetop-nav");
-
-    /* Al clonar el contenido de .header-top .wrapper, hemos utilizado el método cloneNode(true) para clonar todo el contenido y luego añadirlo a .thetop-nav en .off-canvas. */
-    const clonedNav = topNav.cloneNode(true);
-
-    /* Antes de añadir el contenido clonado, hemos eliminado cualquier contenido existente en .thetop-nav utilizando topPlace.innerHTML = ''. */
-    topPlace.innerHTML = "";
-    topPlace.appendChild(clonedNav);
+	const topPlace = document.querySelector(".off-canvas .thetop-nav");
+	topPlace.innerHTML = topNav.innerHTML;
 }
 
 copyMenu();
@@ -67,4 +61,27 @@ function toggleSubMenu(e) {
 
 submenus.forEach((submenu) => {
     submenu.addEventListener("click", toggleSubMenu);
+});
+
+
+/* SLIDER */
+
+/* Inicializar Swiper */
+/* Finalmente, necesitamos inicializar Swiper en JS: */
+
+// Aquí puedes agregar tu código de inicialización de Swiper
+const swiper = new Swiper('.swiper', {
+    // Opciones opcionales
+    loop: true,
+
+    // Si necesitas paginación
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    // Flechas de navegación
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 });
