@@ -1,3 +1,4 @@
+/* Importando una hoja de estilo de Google Fonts. */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Rubik:wght@300;400;500;600&display=swap");
 
 /* Fuentes utilizadas:
@@ -5,6 +6,7 @@
 - Rubik: 300, 400, 500, 600
 */
 
+/* Este código define variables personalizadas utilizando la sintaxis de las variables CSS. Estas variables se utilizan para almacenar valores de colores, tamaños de fuente, porcentajes, pesos de fuente y tipos de transiciones. Las variables definidas aquí pueden ser utilizadas en otros estilos CSS dentro del mismo documento. */
 :root {
     /* Colores primarios */
     --primary-color: #ff6b6b;
@@ -26,30 +28,33 @@
     --percent100: 100%;
     --percent50: 50%;
 
-    /* Tamaños de Font-Weight */
+    /* Tamaños de font-weight (peso de fuente) */
     --fw3: 300;
     --fw5: 500;
     --fw6: 600;
     --fw7: 700;
     --fw8: 800;
 
-    /* Tipos de transiciones para el background */
+    /* Tipos de transiciones para el fondo */
     --trans-background-color: background-color 0.3s, color 0.3s;
     --trans-background: background-color 0.3s;
     --trans-color: color 0.3s;
 }
 
+/* Este código se utiliza comúnmente como un reinicio (reset) de estilos para eliminar los márgenes y rellenos predeterminados de los elementos y comenzar con una base limpia. Esto permite al desarrollador aplicar estilos personalizados sin interferencias o inconsistencias debido a los valores predeterminados del navegador. */
 * {
     margin: 0;
     padding: 0;
 }
 
+/*  Este código se utiliza para aplicar la propiedad box-sizing: border-box a todos los elementos, incluyendo los pseudo-elementos ::before y ::after. Esto garantiza un cálculo coherente y predecible del tamaño de los elementos y facilita la creación de diseños consistentes y controlados. */
 *,
 ::before,
 ::after {
     box-sizing: border-box;
 }
 
+/* Este código establece el estilo para el elemento <body>, definiendo la fuente, tamaño de fuente, grosor de fuente, altura de línea, color de texto y color de fondo. Estos estilos se aplicarán al contenido dentro del elemento <body> en un documento HTML. */
 body {
     font-family: "Rubik";
     font-size: 16px;
@@ -59,34 +64,41 @@ body {
     background-color: var(--white-color);
 }
 
+/* Este código establece el estilo para los enlaces (<a>) en un documento HTML, eliminando la decoración de texto predeterminada, haciendo que los enlaces hereden el color de texto de su elemento padre y evitando cualquier resaltado visual al tocarlos en dispositivos táctiles. */
 a {
     text-decoration: none;
     color: inherit;
     -webkit-tap-highlight-color: transparent;
 }
 
+/* Esta línea elimina los estilos de viñetas o numeración de las listas desordenadas (<ul>), lo que significa que los elementos de la lista no tendrán puntos o números antes del texto. */
 ul {
     list-style: none;
 }
 
+/* Estas líneas establecen que las imágenes (<img>) tendrán una anchura máxima del 100% de su contenedor y se alinearán verticalmente al centro del contenedor. */
 img {
     max-width: var(--percent100);
     vertical-align: middle;
 }
 
+/* Esta línea establece que los elementos <strong> (texto en negrita) tendrán un grosor de fuente definido por la variable --fw8, que en este caso parece ser un valor para negrita. */
 strong {
     font-weight: var(--fw8);
 }
 
+/* Estas líneas establecen que las tablas (<table>) no tendrán espacios entre las celdas y que los bordes de las celdas se colapsarán, creando una apariencia más ajustada y consistente. */
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
 
+/* Esta línea establece que el texto del marcador de posición en los elementos de entrada (<input>) heredará la fuente de su elemento padre. */
 input::placeholder {
     font: inherit;
 }
 
+/* Estas líneas establecen que los encabezados de nivel 1 (<h1>), nivel 2 (<h2>), nivel 3 (<h3>) y nivel 4 (<h4>) utilizarán la fuente "Poppins". */
 h1,
 h2,
 h3,
@@ -94,21 +106,25 @@ h4 {
     font-family: "Poppins";
 }
 
+/* Esta línea establece que los encabezados de nivel 1 (<h1>) tendrán un tamaño de fuente que se calcula utilizando una fórmula que incluye un valor relativo al ancho de la ventana (vw). También se establece un grosor de fuente definido por --fw8 y un espaciado de línea de 1. */
 h1 {
     font-size: calc(1.3em + 1vw);
     font-weight: var(--fw8);
     line-height: 1;
 }
 
+/* Esta línea establece que los encabezados de nivel 2 (<h2>) tendrán un tamaño de fuente de 2.5 veces el tamaño predeterminado. */
 h2 {
     font-size: 2.5em;
 }
 
+/* Esta línea establece que los encabezados de nivel 3 (<h3>) tendrán un tamaño de fuente de 1.2 veces el tamaño predeterminado y un grosor de fuente definido por --fw7. */
 h3 {
     font-size: 1.2em;
     font-weight: var(--fw7);
 }
 
+/* Esta línea establece que los encabezados de nivel 4 (<h4>) tendrán un tamaño de fuente igual al tamaño predeterminado y un grosor de fuente definido por --fw6. */
 h4 {
     font-size: 1em;
     font-weight: var(--fw6);

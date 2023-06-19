@@ -19,6 +19,8 @@
 
 <body>
     <div id="page" class="site">
+
+        <!-- Este código crea un panel deslizante oculto en la vista de escritorio que contiene un logotipo, opciones de navegación, departamentos y contenido adicional relacionado con la parte superior del sitio web. Los estilos CSS y los scripts adicionales pueden personalizarse para lograr la apariencia y el comportamiento deseados del panel deslizante. -->
         <aside class="site-off desktop-hide">
             <div class="off-canvas">
                 <div class="canvas-head flexitem">
@@ -33,7 +35,11 @@
             </div>
         </aside>
 
+
+        <!-- Creamos toda la parte del Header 'Inicio del Header' -->
         <header>
+
+            <!-- este código crea una sección de encabezado en la página web con enlaces principales, opciones de selección de moneda e idioma, y estilos CSS para el diseño y apariencia del encabezado. Puedes personalizar el contenido, los enlaces y los estilos según tus requisitos específicos. -->
             <div class="header-top mobile-hide">
                 <div class="container">
                     <div class="wrapper flexitem">
@@ -72,14 +78,33 @@
                     </div>
                 </div>
             </div>
-            <!-- header-top -->
+            <!-- Creamos toda la parte del Header 'Fin del Header' -->
+
+            <!-- este código crea un encabezado de navegación con un logotipo, un menú de navegación principal y elementos adicionales en la sección derecha, como un icono para favoritos y un icono para el carrito de compras. Puede personalizar el contenido, los enlaces y los estilos según sus necesidades específicas -->
+
+            <!-- Creamos toda la parte del menu de navegacion 'Inicion del Header-nav' -->
+            <!-- Este div envuelve todo el encabezado de navegación. -->
             <div class="header-nav">
+
+                <!-- Este div representa un contenedor que ayuda a organizar el contenido del encabezado. Puede ajustar las clases CSS según sus necesidades. -->
                 <div class="container">
+
+                    <!-- Este div envuelve los elementos principales del encabezado y utiliza la clase CSS flexitem para aplicar un diseño flexible a sus elementos secundarios. -->
                     <div class="wrapper flexitem">
+
+                        <!-- Este enlace representa un botón de menú desplegable en dispositivos de escritorio y tiene la clase CSS desktop-hide para ocultarlo en dispositivos móviles. Puede ajustar el enlace y la clase CSS según sus necesidades. -->
                         <a href="#" class="trigger desktop-hide"><span class="i ri-menu-2-line"></span></a>
+
+                        <!-- Este div representa la sección izquierda del encabezado y utiliza la clase CSS flexitem para aplicar un diseño flexible a sus elementos secundarios. Contiene el logotipo y el menú de navegación principal. -->
                         <div class="left flexitem">
+
+                            <!--  Este div representa el logotipo de la página web. Puede ajustar el enlace y el texto según sus necesidades. -->
                             <div class="logo"><a href="/"><span class="circle"></span>.Store</a></div>
+
+                            <!--  Este elemento <nav> envuelve el menú de navegación principal y utiliza la clase CSS mobile-hide para ocultarlo en dispositivos móviles. Puede ajustar la clase CSS según sus necesidades. -->
                             <nav class="mobile-hide">
+
+                                <!-- Esta lista desordenada (<ul>) contiene los enlaces secundarios del menú de navegación. Utiliza la clase CSS flexitem para aplicar un diseño flexible a los elementos de la lista. Puede agregar o modificar los enlaces según sus necesidades. -->
                                 <ul class="flexitem second-links">
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="#">Shop</a></li>
@@ -186,8 +211,11 @@
                                 </ul>
                             </nav>
                         </div>
-                        
+
+                        <!-- Este div representa la sección derecha del encabezado y contiene elementos adicionales, como un icono para los favoritos y un icono para el carrito de compra.-->
                         <div class="right">
+
+                            <!-- Esta lista desordenada (<ul>) contiene los elementos adicionales en la sección derecha del encabezado, como el icono de favoritos y el icono del carrito de compras. Puede ajustar los enlaces y el contenido según sus necesidades. -->
                             <ul class="flexitem second-links">
                                 <li class="mobile-hide"><a href="#">
                                         <div class="icon-large"><i class="ri-heart-line"></i></div>
@@ -211,28 +239,60 @@
                     </div>
                 </div>
             </div>
-            <!-- header-nav -->
+            <!-- Creamos toda la parte del menu de navegacion 'Fin del Header-nav' -->
 
+
+            <!-- Creamos toda la parte de la barra de navegación 'Inicio del Header-main' -->
+
+            <!-- este código crea la estructura de un encabezado de página web con una barra de navegación que muestra diferentes categorías de productos y opciones de búsqueda. Los estilos y funcionalidades adicionales se aplicarían mediante CSS y JavaScript. -->
+
+            <!-- Esta es la sección principal del encabezado. La clase mobile-hide indica que este elemento no se mostrará en dispositivos móviles. -->
             <div class="header-main mobile-hide">
+
+                <!-- Proporciona un contenedor para el contenido del encabezado. -->
                 <div class="container">
+
+                    <!-- Define un contenedor flexible para los elementos del encabezado. La clase flexitem se utiliza para aplicar estilos flexibles. -->
                     <div class="wrapper flexitem">
+
+                        <!-- Contenedor para los elementos del lado izquierdo del encabezado. -->
                         <div class="left">
+
+                            <!-- Representa la sección de "Todos los departamentos" donde se muestra una lista desplegable de categorías de productos. -->
                             <div class="dpt-cat">
+
+                                <!-- Encabezado de la sección de departamentos que muestra el texto principal y un ícono de menú desplegable en dispositivos no móviles. -->
                                 <div class="dpt-head">
                                     <div class="main-text">All Departments</div>
                                     <div class="mini-text mobile-hide">Total 1059 Products</div>
+
+                                    <!-- Un enlace con la clase dpt-trigger que muestra el menú desplegable en dispositivos no móviles. -->
                                     <a href="#" class="dpt-trigger mobile-hide">
                                         <i class="ri-menu-3-line ri-xl"></i>
                                     </a>
                                 </div>
+
+                                <!-- Contenedor para el menú desplegable de departamentos. -->
                                 <div class="dpt-menu">
+
+                                    <!-- Lista desordenada que contiene los enlaces a los diferentes departamentos. -->
                                     <ul class="second-links">
+
+                                        <!--  Un elemento de lista con la clase has-child que indica que tiene un submenú. En este caso, representa la categoría de belleza.-->
                                         <li class="has-child beauty">
+
+                                            <!-- Enlace para la categoría de belleza. -->
                                             <a href="#">
+
+                                                <!-- Un ícono de oso sonriente utilizado como imagen para la categoría de belleza. -->
                                                 <div class="icon-large"><i class="ri-bear-smile-line"></i></div>
                                                 Beauty
+
+                                                <!-- Un ícono de flecha hacia la derecha para indicar que hay un submenú desplegable. -->
                                                 <div class="icon-small"><i class="ri-arrow-right-s-line"></i></div>
                                             </a>
+
+                                            <!-- Lista desordenada que contiene los enlaces a subcategorías de la categoría de belleza. -->
                                             <ul>
                                                 <li><a href="#">Makeup</a></li>
                                                 <li><a href="#">Skin Care</a></li>
@@ -404,29 +464,60 @@
                     </div>
                 </div>
             </div>
-            <!-- header-main -->
+             <!-- Creamos toda la parte de la barra de navegación 'Fin del Header-main' -->
 
         </header>
-        <!-- Header -->
+        <!-- Creamos toda la parte del Header 'Fin del Header' -->
 
+
+        <!-- Creamos toda la parte principal del contenido 'Inicio del Main' -->
+
+        <!--  Define la sección principal del contenido de la página. -->
         <main>
+
+            <!-- este código crea un slider o carrusel de imágenes promocionales que muestra varias diapositivas con imágenes y contenido de texto. Los estilos y funcionalidades adicionales se aplican utilizando la biblioteca Swiper. -->
+
+            <!-- Contenedor principal del slider. -->
             <div class="slider">
+
+                <!-- Proporciona un contenedor para el contenido del slider. -->
                 <div class="container">
+
+                    <!-- Define un contenedor para los elementos internos del slider. -->
                     <div class="wrapper">
+
+                        <!-- Contenedor del slider que utiliza la clase swiper para aplicar estilos y funcionalidades de la biblioteca Swiper. -->
                         <div class="myslider swiper">
+
+                            <!-- Contenedor de las diapositivas del slider. -->
                             <div class="swiper-wrapper">
+
+                                <!-- Cada diapositiva del slider se coloca dentro de este elemento. -->
                                 <div class="swiper-slide">
+
+                                    <!-- Contenedor de cada elemento de diapositiva que contiene la imagen y el contenido de texto. -->
                                     <div class="item">
+
+                                        <!-- Contenedor de la imagen de la diapositiva. La clase object-cover se utiliza para asegurar que la imagen se ajuste al contenedor sin deformarse. -->
                                         <div class="image object-cover">
                                             <img src="./assets/slider/slider0.jpg" alt="">
                                         </div>
+
+                                        <!-- Contenedor del contenido de texto de la diapositiva. -->
                                         <div class="text-content flexcol">
+
+                                            <!-- Encabezado de nivel 4 que muestra el título de la diapositiva. -->
                                             <h4>Shoes Fashion</h4>
+
+                                            <!-- Encabezado de nivel 2 que muestra el texto principal de la diapositiva. Las etiquetas <span> se utilizan para resaltar partes del texto. -->
                                             <h2><span>Come and Get It!</span><br><span>Brand New Shoes</span></h2>
+
+                                            <!-- Un enlace con la clase primary-button que dirige al usuario a una página o acción relacionada con la diapositiva. -->
                                             <a href="#" class="primary-button">Shop Now</a>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="swiper-slide">
                                     <div class="item">
                                         <div class="image object-cover">
@@ -439,6 +530,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="swiper-slide">
                                     <div class="item">
                                         <div class="image object-cover">
@@ -451,6 +543,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="swiper-slide">
                                     <div class="item">
                                         <div class="image object-cover">
@@ -465,9 +558,12 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Contenedor opcional para la paginación del slider, que muestra puntos que indican la posición actual del slider y permite navegar entre las diapositivas.-->
                             <!-- Si necesitamos la paginacion -->
                             <div class="swiper-pagination"></div>
 
+                            <!-- Contenedores opcionales para los botones de navegación del slider que permiten al usuario desplazarse hacia atrás y hacia adelante entre las diapositivas. -->
                             <!-- Si necesitamos los botones de navegacion, esta parte es opcional -->
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
@@ -476,7 +572,7 @@
                 </div>
             </div>
         </main>
-        <!-- Main -->
+        <!-- Creamos toda la parte principal del contenido 'Fin del Main' -->
 
         <footer></footer>
         <!-- Footer -->
@@ -486,7 +582,10 @@
     <!-- Con la version de swiper@9 no ejecuta el script, entonces toca poner la verison anterios swiper@8 -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <script src="./javascript/main.js"></script>
+    <script src="./javascript/copy-menu.js"></script>
+    <script src="./javascript/mobile-menu.js"></script>
+    <script src="./javascript/sub-menu.js"></script>
+    <script src="./javascript/slider.js"></script>
 </body>
 
 </html>
