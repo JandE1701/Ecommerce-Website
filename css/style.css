@@ -271,6 +271,7 @@ h4 {
 * 01. HEADER
 *-------------------- */
 
+/* En resumen, este código aplica algunas propiedades CSS a los elementos <a> que son hijos directos de <li> dentro de elementos con clase .off-canvas o <header>. Estas propiedades establecen el comportamiento de visualización, posición y transición de color de los enlaces. */
 :where(.off-canvas, header) li>a {
     display: flex;
     position: relative;
@@ -307,10 +308,12 @@ h4 {
     display: none;
 }
 
+/* En resumen, este código aplica un relleno específico a los elementos <a> que son hijos directos de <li> dentro de elementos <ul> que se encuentran dentro de elementos con clase .header-top o .thetop-nav. El relleno se utiliza para ajustar el espacio alrededor del contenido de los enlaces y puede ayudar a mejorar la legibilidad o el aspecto visual de los elementos en el diseño de la página. */
 :where(.header-top, .thetop-nav) .right ul ul li a {
     padding: 0.25em 1em;
 }
 
+/* En resumen, este código aplica un color de fondo específico a los enlaces <a> que se encuentran dentro de elementos <li> con la clase .current y que están en el segundo nivel de elementos <ul>. Esto se aplica únicamente a los elementos dentro de elementos con clase .right que están contenidos en elementos con clase .header-top o .thetop-nav. El color de fondo utilizado es determinado por la variable CSS --border-color, que debe ser definida en la hoja de estilos con un valor específico. */
 :where(.header-top, .thetop-nav) .right ul ul li.current a {
     background-color: var(--border-color);
 }
@@ -357,6 +360,7 @@ h4 {
     z-index: -1;
 }
 
+/* En resumen, este código crea un pseudo-elemento ::before para los elementos con la clase .circle, el cual representa un círculo con un tamaño, color de fondo y posición específicos. Este pseudo-elemento se posiciona absolutamente dentro del elemento principal y se muestra como un círculo parcialmente transparente en la esquina inferior derecha del elemento principal. */
 .circle::before {
     content: "";
     position: absolute;
@@ -456,7 +460,7 @@ nav .fly-item {
     width: 60px;
 }
 
-.dpt-menu>ul>li>a {
+.dpt-menu > ul > li > a {
     font-size: var(--font-small);
     height: 46px;
     align-items: center;
@@ -492,6 +496,7 @@ form.search input {
     font-weight: var(--fw3);
 }
 
+/* En resumen, esta regla CSS posiciona los elementos <span> y <button> que son hijos de un elemento <form> con la clase .search en la parte superior del elemento principal y les aplica un relleno, tamaño de fuente, color de texto y altura específicos */
 form.search :where(span, button) {
     position: absolute;
     top: 0;
@@ -591,7 +596,8 @@ form.search button:hover {
     border-radius: 7px 7px 0 0;
 }
 
-.off-canvas .has-child> :where(ul, .mega) {
+/* En resumen, esta regla CSS aplica estilos de tamaño de fuente, peso de fuente, altura de línea, relleno y animación a los elementos <ul> y .mega que son hijos directos de un elemento con la clase .has-child. También establece la altura inicial de los elementos como cero para ocultar su contenido y proporciona una animación suave cuando se expanden. */
+.off-canvas .has-child > :where(ul, .mega) {
     font-size: var(--font-small);
     font-weight: var(--fw3);
     line-height: 28px;
@@ -600,9 +606,11 @@ form.search button:hover {
     height: auto;
     max-height: 0;
     overflow: hidden;
+    /* Se establece una transición animada para la propiedad max-height, con una duración de 0.3 segundos y una función de aceleración específica (cubic-bezier). */
     transition: max-height .3s cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
+/* Esta regla se aplica cuando los elementos cumplen las condiciones mencionadas y les permite expandirse mostrando su contenido completo. Al establecer una altura máxima considerablemente grande, como 2000 píxeles, se asegura que los elementos tengan suficiente espacio para mostrar todo su contenido sin restricciones de altura. Esto puede ser útil en casos donde se desea expandir un menú desplegable o un elemento similar para mostrar opciones o información adicional. */
 .off-canvas .expand> :where(ul, .mega) {
     max-height: 2000px;
 }
@@ -639,6 +647,7 @@ form.search button:hover {
     width: var(--percent100);
 }
 
+/* Esto significa que los elementos que cumplan todas las condiciones mencionadas se ocultarán y no serán visibles para los usuarios. Esta regla puede usarse para ocultar elementos específicos en una determinada estructura de navegación o diseño, brindando flexibilidad en la apariencia y comportamiento del sitio web. */
 .off-canvas .thetop-nav .right>ul> :where(:nth-child(4), li:nth-child(5))>a {
     display: none;
 }
@@ -696,11 +705,13 @@ form.search button:hover {
     border-radius: 4px;
 }
 
+/* Esta regla se utiliza para aplicar un estilo específico al primer <span> que se encuentra dentro de un <h2> o <h3> dentro del elemento .text-content, como cambiar el grosor de la fuente y establecer un diseño de columnas. */
 .text-content :where(h2, h3) span:first-child {
     font-weight: var(--fw3);
     columns: var(--light-text-color);
 }
 
+/* Esta regla se utiliza para aplicar un estilo específico al último <span> que se encuentra dentro de un <h2> o <h3> dentro del elemento .text-content, como cambiar el color del texto, convertirlo en mayúsculas y ajustar el espaciado entre letras. */
 .text-content :where(h2, h3) span:last-child {
     color: var(--secondary-dark-color);
     text-transform: uppercase;
@@ -719,11 +730,31 @@ form.search button:hover {
 }
 
 
-
-
 /* --------------------
 * 03. BRANDS
 *-------------------- */
+
+.brands .wrapper{
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2em 0;
+}
+
+.brands .item img{
+    opacity: .25;
+    transition: opacity .3s;
+}
+
+.brands .item a:hover img{
+    opacity: 1;
+}
+
+
+
+
+
+
+
 
 /* --------------------
 * 04. PRODUCT BLOCK STYLE
@@ -902,6 +933,7 @@ form.search button:hover {
         background-image: url(../assets/menu/menu_bg4.jpg);
     }
 
+    /* En resumen, esta regla CSS aplica un fondo degradado lineal al pseudoelemento ::before de los elementos que cumplen las condiciones mencionadas. El degradado crea un efecto de transparencia en el borde izquierdo del elemento, donde se mezcla desde un color blanco sólido hasta una transparencia completa. Esto se utiliza para resaltar visualmente la presencia de elementos secundarios o submenús en el menú principal. */
     .dpt-menu .has-child> :where(ul, .mega)::before {
         content: "";
         position: absolute;
@@ -922,7 +954,7 @@ form.search button:hover {
     }
 
     /* SILIDER */
-    .slider>div>.wrapper {
+    .slider> div > .wrapper {
         width: calc(100% - (300px + 2em));
         margin-left: auto;
     }
