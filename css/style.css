@@ -708,7 +708,7 @@ form.search button:hover {
 /* Esta regla se utiliza para aplicar un estilo específico al primer <span> que se encuentra dentro de un <h2> o <h3> dentro del elemento .text-content, como cambiar el grosor de la fuente y establecer un diseño de columnas. */
 .text-content :where(h2, h3) span:first-child {
     font-weight: var(--fw3);
-    columns: var(--light-text-color);
+    color: var(--light-text-color);
 }
 
 /* Esta regla se utiliza para aplicar un estilo específico al último <span> que se encuentra dentro de un <h2> o <h3> dentro del elemento .text-content, como cambiar el color del texto, convertirlo en mayúsculas y ajustar el espaciado entre letras. */
@@ -911,7 +911,7 @@ form.search button:hover {
     background-repeat-y: no-repeat;
 }
 
-.products .item:where(:nth-child(3),:nth-child(3)) .stars{
+.products .item:where(:nth-child(3), :nth-child(3)) .stars {
     width: 64px;
 }
 
@@ -1052,16 +1052,83 @@ form.search button:hover {
     margin-top: 145px;
 }
 
-.products.main .item:hover .content > *:not(.footer){
+.products.main .item:hover .content>*:not(.footer) {
     z-index: 3;
 }
 
 
+/* --------------------
+* 05. BANNER 
+*-------------------- */
+
+.banners .item {
+    position: relative;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+}
+
+.banner .image {
+    text-align: right;
+}
+
+.banner .get-gray {
+    background-color: var(--border-color);
+}
+
+
+.banner :where(.text-content, .over-link) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--percent100);
+    height: var(--percent100);
+}
+
+.banner .text-content {
+    padding: 1.5em 2.5em;
+}
+
+.banner h3 {
+    font-size: calc(1em + 0.5vw);
+    font-weight: var(--fw3);
+}
+
+.banner h3 span {
+    font-size: 80%;
+}
+
+.banner .primary-button {
+    z-index: 3;
+}
+
+.banners .product-categories .item{
+    display: flex;
+    padding: 1.5em;
+}
+
+.banners .product-categories .image{
+    max-width: 150px;
+}
+
+.mini-links ul {
+    font-size: var(--font-small);
+    color: var(--light-text-color);
+    margin-top: 1em;
+}
+
+.banners .second-links {
+    margin-top: 2em;
+}
+
+.mini-links li a:hover {
+    text-decoration: underline;
+}
 
 
 
-
-
+/* --------------------
+* 05. FOOTER 
+*-------------------- */
 
 
 
@@ -1085,7 +1152,8 @@ form.search button:hover {
         font-size: 1.25em;
     }
 
-    .products.mini {
+    .products.mini,
+    .banner .row {
         flex: 0 0 50%;
     }
 
@@ -1293,7 +1361,8 @@ form.search button:hover {
     }
 
     /* PRODUCTS */
-    .trending .products {
+    .trending .products,
+    .product-categories .row {
         flex: 0 0 33.3333%;
     }
 
